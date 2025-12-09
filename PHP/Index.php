@@ -1,20 +1,25 @@
 <?php
 
-use DAL\WeaponDAL;
+require_once __DIR__ . '/Entities/Fleet.php';
+require_once __DIR__ . '/Entities/Spaceship.php';
+require_once __DIR__ . '/Entities/Canon.php';
+require_once __DIR__ . '/Entities/Armory.php';
+require_once __DIR__ . '/Entities/Weapon.php';
+require_once __DIR__ . '/Interfaces/Entities/IArmory.php';
+require_once __DIR__ . '/Setup/DB_Connector.php';
+require_once __DIR__ . '/Dal/WeaponDAL.php';
+require_once __DIR__ . '/Scripts/Battle.php';
+
+use Entities\Canon;
+use Entities\Room;
+use Entities\Armory;
+use Entities\Weapon;
 use Entities\Fleet;
-use Scripts\Battle;
+use Entities\Spaceship;
+use Interfaces\Entities\IArmory;
 use Setup\DB_Connector;
-
-require_once 'Entities/Room.php';
-require_once 'Entities/Armory.php';
-require_once 'Entities/Weapon.php';
-require_once 'Entities/Fleet.php';
-require_once 'Entities/Spaceship.php';
-require_once 'Interfaces/Entities/IArmory.php';
-require_once 'Setup/DB_Connector.php';
-require_once 'Dal/WeaponDAL.php';
-require_once 'Scripts/Battle.php';
-
+use Dal\WeaponDAL;
+use Scripts\Battle;
 
 
 $ChallengerFleet = new Fleet("ChallengerFleet");
@@ -60,4 +65,4 @@ $Battle->AddFleet($ViperFleet);
 $Battle->Start();
 
 $Armory = new Armory("Steve" , 5,5);
-$Armory->roomSize();
+Echo $Armory->roomSize();

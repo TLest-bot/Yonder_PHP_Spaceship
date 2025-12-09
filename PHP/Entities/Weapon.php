@@ -1,6 +1,10 @@
 <?php
 
+namespace Entities;
 use Interfaces\Entities\IWeapon;
+require_once __DIR__ . '/../interfaces/Entities\IWeapon.php';
+
+
 
 class Weapon implements IWeapon
 {
@@ -73,6 +77,4 @@ class Weapon implements IWeapon
     {
         return "Weapon: {$this->Name}, Damage: {$this->MinimumDamage}/{$this->MaximumDamage}, Ammo: {$this->Ammo}/{$this->MagazineSize}";
     }
-
-
 }

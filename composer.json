@@ -1,7 +1,11 @@
 {
-    "require": {
-        "vlucas/phpdotenv": "^5.6",
-      "ext-pdo": "*",
-      "ext-mysql_xdevapi": "*"
+  "require": {
+    "vlucas/phpdotenv": "^5.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Interfaces\\": "PHP/Interfaces/",
+      "Entities\\": "PHP/Entities/"
     }
+  }
 }

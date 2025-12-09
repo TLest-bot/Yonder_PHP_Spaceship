@@ -2,12 +2,13 @@
 
 namespace Interfaces\Entities;
 
-use Canon;
-use Spaceship;
+require_once __DIR__ . '/../../Entities/Spaceship.php';
+require_once __DIR__ . '/../../Entities/Canon.php';
+use Entities\Spaceship;
+use Entities\Canon;
 
 interface ISpaceship
 {
-    public function __construct(string $Name, int $Hitpoints, int $Fuel);
 
     public function getName(): string;
 

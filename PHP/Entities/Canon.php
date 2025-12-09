@@ -1,6 +1,7 @@
 <?php
-
+Namespace Entities;
 use Interfaces\Entities\ICanon;
+require_once __DIR__ . '/../interfaces/Entities\ICanon.php';
 
 class Canon implements ICanon
 {

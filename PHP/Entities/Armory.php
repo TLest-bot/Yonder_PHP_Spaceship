@@ -1,10 +1,13 @@
 <?php
+Namespace Entities;
 
 use Interfaces\Entities\IArmory;
+use Entities\Room;
+use Entities\Weapon;
+require_once __DIR__ . '/../interfaces/Entities\IArmory.php';
+require_once __DIR__ . '/Room.php';
 
-require_once 'Room.php';
-require_once 'Weapon.php';
-require_once 'Interfaces\Entities\IArmory.php';
+
 class Armory extends Room implements IArmory
 {
     public array $Weapons;

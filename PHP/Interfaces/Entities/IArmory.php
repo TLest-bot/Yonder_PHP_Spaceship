@@ -1,11 +1,9 @@
 <?php
+namespace Interfaces\Entities;
+require_once __DIR__ . '/../../Entities/Weapon.php';
 
-Namespace Interfaces\Entities;
-
-use Weapon;
-
+use Entities\Weapon;
 Interface IArmory
 {
-public function __construct(string $Name, int $Length, int $Width);
 public function AddWeapon(Weapon $weapon): bool;
 }

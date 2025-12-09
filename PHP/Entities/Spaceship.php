@@ -1,9 +1,11 @@
 <?php
 
-use Entities\Fleet;
+namespace Entities;
 use Interfaces\Entities\ISpaceship;
-
+use Entities\Canon;
+require_once __DIR__ . '/../interfaces/Entities\ISpaceship.php';
 Require_once 'Canon.php';
+
 
 class Spaceship implements ISpaceship
 {

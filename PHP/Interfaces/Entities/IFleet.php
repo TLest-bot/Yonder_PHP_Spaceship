@@ -2,11 +2,12 @@
 
 namespace Interfaces\Entities;
 
-use Spaceship;
+use Entities\Spaceship;
+
+require_once __DIR__ . '/../../Entities/Spaceship.php';
 
 interface IFleet
 {
-    public function __construct(string $FleetName);
     public function AddShip(Spaceship $spaceship ) : void;
     public function removeDeadShips(): void;
     public function removeShip(Spaceship $shipToRemove): void;

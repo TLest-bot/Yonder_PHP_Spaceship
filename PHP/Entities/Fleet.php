@@ -1,9 +1,11 @@
 <?php
 
 namespace Entities;
-
+use Entities\Spaceship;
 use Interfaces\Entities\IFleet;
-use Spaceship;
+
+
+require_once __DIR__ . '/../interfaces/Entities\IFleet.php';
 
 class Fleet implements IFleet
 {

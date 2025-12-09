@@ -1,10 +1,8 @@
 <?php
 
 namespace Interfaces\Entities;
-
 interface IWeapon
 {
-    public function __construct(string $Name, int $MinimumDamage, int $MaximumDamage, int $MagazineSize, int $Ammo);
     public function GetName(): string;
     public function GetMinimumDamage(): int;
     public function GetMaximumDamage(): int;
