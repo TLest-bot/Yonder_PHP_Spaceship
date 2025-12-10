@@ -1,10 +1,11 @@
 <?php
 namespace DAL;
 
+use Entities\Weapon;
+use Interfaces\Entities\IWeapon;
 use mysql_xdevapi\Exception;
 use PDO;
 use Setup\DB_Connector;
-use Weapon;
 
 class WeaponDAL
 {
@@ -15,7 +16,7 @@ class WeaponDAL
     {
         $this->DB_Connector = new DB_Connector();
     }
-    public function GetWeapon($weaponId): ?Weapon
+    public function GetWeapon($weaponId): ?IWeapon
     {
         $pdo = $this->DB_Connector->getPDO();
 
@@ -46,7 +47,7 @@ class WeaponDAL
         }
     }
 
-        public function insertWeapon(Weapon $weapon): ?int
+        public function insertWeapon(IWeapon $weapon): ?int
         {
             $pdo = $this->DB_Connector->getPDO();
 

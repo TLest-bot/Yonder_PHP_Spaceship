@@ -3,9 +3,11 @@
 namespace Entities;
 use Entities\Spaceship;
 use Interfaces\Entities\IFleet;
+use Interfaces\Entities\ISpaceship;
 
 
 require_once __DIR__ . '/../interfaces/Entities\IFleet.php';
+require_once __DIR__ . '/../interfaces/Entities\ISpaceship.php';
 
 class Fleet implements IFleet
 {
@@ -20,7 +22,7 @@ class Fleet implements IFleet
         $this->LostShips = [];
     }
 
-    public function AddShip(Spaceship $spaceship ) : void
+    public function AddShip(ISpaceship $spaceship ) : void
     {
         $this->Ships[] = $spaceship;
     }
@@ -45,7 +47,7 @@ class Fleet implements IFleet
         $this->Ships = $activeShips;
     }
 
-    public function removeShip(Spaceship $shipToRemove): void
+    public function removeShip(ISpaceship $shipToRemove): void
     {
         $active = [];
         foreach ($this->Ships as $ship) {

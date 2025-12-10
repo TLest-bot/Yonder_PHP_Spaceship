@@ -1,9 +1,11 @@
 <?php
 
 namespace Entities;
+use Interfaces\Entities\ICanon;
 use Interfaces\Entities\ISpaceship;
 use Entities\Canon;
 require_once __DIR__ . '/../interfaces/Entities\ISpaceship.php';
+require_once __DIR__ . '/../interfaces/Entities\ICanon.php';
 Require_once 'Canon.php';
 
 
@@ -51,12 +53,12 @@ class Spaceship implements ISpaceship
         $this->Fuel = $Fuel;
     }
 
-    public function AddCanon(Canon $Canon)
+    public function AddCanon(ICanon $Canon)
     {
         $this->Cannons[] = $Canon;
     }
 
-    public function RemoveCanon(Canon $CanonToRemove) : bool
+    public function RemoveCanon(ICanon $CanonToRemove) : bool
     {
         foreach ($this->Cannons as $key => $ExistingCanon)
         {
@@ -70,7 +72,7 @@ class Spaceship implements ISpaceship
         return false;
     }
 
-    public function Attack(Spaceship $Attacked_Spaceship): int
+    public function Attack(ISpaceship $Attacked_Spaceship): int
     {
         $totalDamage = 0;
         foreach ($this->Cannons as $Live_Cannon)

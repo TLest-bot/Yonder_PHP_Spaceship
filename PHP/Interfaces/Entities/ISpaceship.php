@@ -22,9 +22,9 @@ interface ISpaceship
 
     public function setFuel(int $Fuel): void;
 
-    public function AddCanon(Canon $Canon);
+    public function AddCanon(ICanon $Canon);
 
-    public function RemoveCanon(Canon $CanonToRemove) : bool;
+    public function RemoveCanon(ICanon $CanonToRemove) : bool;
 
-    public function Attack(Spaceship $Attacked_Spaceship): int;
+    public function Attack(ISpaceship $Attacked_Spaceship): int;
 }

@@ -4,7 +4,10 @@ Namespace Entities;
 use Interfaces\Entities\IArmory;
 use Entities\Room;
 use Entities\Weapon;
+use Interfaces\Entities\IWeapon;
+
 require_once __DIR__ . '/../interfaces/Entities\IArmory.php';
+require_once __DIR__ . '/../interfaces/Entities\IWeapon.php';
 require_once __DIR__ . '/Room.php';
 
 
@@ -17,7 +20,7 @@ class Armory extends Room implements IArmory
         parent::__construct($Name, $Length, $Width);
         $this->Weapons = [];
     }
-    public function AddWeapon(Weapon $weapon): bool
+    public function AddWeapon(IWeapon $weapon): bool
     {
         $this->Weapons[] = $weapon;
         echo ("{$this->Name} Added {$weapon}");
