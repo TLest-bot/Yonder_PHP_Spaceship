@@ -3,7 +3,7 @@ Namespace Entities;
 use Interfaces\Entities\IRoom;
 require_once __DIR__ . '/../interfaces/Entities\IRoom.php';
 
-class Room implements IRoom
+abstract class Room implements IRoom
 {
     public string $Name;
     public int $Length;

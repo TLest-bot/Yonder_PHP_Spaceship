@@ -15,6 +15,7 @@ class Spaceship implements ISpaceship
     public int $Hitpoints;
     public int $Fuel;
     public array $Cannons;
+
     public function __construct(string $Name, int $Hitpoints, int $Fuel)
     {
         $this->Name = $Name;
